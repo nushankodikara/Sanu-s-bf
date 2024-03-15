@@ -41,7 +41,7 @@
 		>
 			<div class="w-full max-w-xl lg:max-w-3xl">
 				<div class="col-span-6">
-					<h1 class="cursive text-6xl font-bold text-gray-900">Pure Promise</h1>
+					<h1 class="cursive text-6xl font-bold text-gray-900">Perfect Planner</h1>
 					<h2 class="text-2xl font-thin text-gray-900">Login to Your Account</h2>
 				</div>
 

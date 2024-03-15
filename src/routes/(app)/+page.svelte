@@ -24,7 +24,7 @@
 </script>
 
 <div
-	class="flex min-h-screen w-full flex-col items-center justify-center gap-8 bg-[url('https://unsplash.com/photos/30UOqDM5QW0/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTF8fHdlZGRpbmd8ZW58MHwwfHx8MTcwOTk5OTE0NHww&force=true&w=1920')] bg-cover p-4"
+	class="flex min-h-screen w-full flex-col items-center justify-center gap-8 bg-[url('https://unsplash.com/photos/9_XfcBxf_uo/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTR8fHdlZGRpbmd8ZW58MHwwfHx8MTcxMDQ3MDkxNnww&force=true&w=1920')] bg-cover p-4"
 >
 	<form class="mx-4 flex w-full max-w-xl">
 		<div class="relative">

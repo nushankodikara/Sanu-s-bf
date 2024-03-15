@@ -47,7 +47,7 @@
 </script>
 
 <div
-	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/NSVJAAXOYHs/download?force=true&w=1920')] bg-cover"
+	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/dS87qokCAC4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDcxMjQ2fA&force=true&w=1920')] bg-cover"
 >
 	<div class="h-full w-full bg-primary-900 p-16 py-48 text-center opacity-30">
 		<h2 class="cursive text-2xl font-bold text-white md:text-6xl">Vendors</h2>

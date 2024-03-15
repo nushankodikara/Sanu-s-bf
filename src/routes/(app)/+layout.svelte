@@ -18,7 +18,7 @@
 	<NavBrand href="/">
 		<span
 			class="cursive self-center whitespace-nowrap text-xl font-semibold text-primary-600 dark:text-white md:text-2xl"
-			>Pure Promise</span
+			>Perfect Planner</span
 		>
 	</NavBrand>
 	<SignedIn let:user let:signOut>
@@ -42,7 +42,7 @@
 		<NavUl class="px-16 md:rounded-full md:bg-primary-900">
 			<NavLi class="md:text-white" href="/">Home</NavLi>
 			<NavLi class="md:text-white" href="/gallery">Gallary</NavLi>
-			<NavLi class="md:text-white" href="/vendors">Vendors</NavLi>
+			<NavLi class="md:text-white" href="/events">Events</NavLi>
 			<NavLi class="md:text-white" href="/about">About Us</NavLi>
 			<NavLi class="md:text-white" href="/contact">Contact Us</NavLi>
 		</NavUl>
@@ -64,11 +64,11 @@
 					<a href="/" class="flex items-center">
 						<span
 							class="cursive self-center whitespace-nowrap text-xl font-semibold text-primary-600 dark:text-white md:text-2xl"
-							>Pure Promise</span
+							>Perfect Planner</span
 						>
 					</a>
 				</div>
-				<div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+				<!-- <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
 					<div>
 						<h2 class="mb-6 text-sm font-semibold uppercase text-gray-900 dark:text-white">
 							Resources
@@ -108,7 +108,7 @@
 							</li>
 						</ul>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<hr class="my-6 border-gray-200 dark:border-gray-700 sm:mx-auto lg:my-8" />
 			<div class="sm:flex sm:items-center sm:justify-between">
