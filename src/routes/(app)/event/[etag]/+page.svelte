@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	const products = [
 		// event planning and coordination ,decor and designs, catering and culinary, fashion and beauty, photography and videography, music and entertainment
 		{
@@ -44,23 +44,30 @@
 			price: ''
 		}
 	];
+
+	export let data;
+	let { tag } = data;
+	// Replace - with space and capitalize
+	let etag = tag.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
 </script>
 
 <div
-	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/dS87qokCAC4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDcxMjQ2fA&force=true&w=1920')] bg-cover"
+	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/iPgQJEcGoE0/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8b3V0ZG9vciUyMGV2ZW50fGVufDB8MHx8fDE3MTA0Nzg5MTd8MA&force=true&w=1920')] bg-cover"
 >
 	<div class="h-full w-full bg-primary-900 p-16 py-48 text-center opacity-30">
-		<h2 class="cursive text-2xl font-bold text-white md:text-6xl">Vendors</h2>
+		<h2 class="cursive text-2xl font-bold text-white md:text-6xl">Events</h2>
 	</div>
 </div>
 
 <section>
 	<div class="mx-auto w-full max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
 		<header>
-			<h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Shops By Category</h2>
+			<h2 class="text-xl font-bold text-gray-900 sm:text-3xl">
+				Services for {etag}
+			</h2>
 
 			<p class="mt-4 max-w-md text-gray-500">
-				Explore vendors by category effortlessly. From fashion to wellness, find curated selections
+				Explore Events by category effortlessly. From fashion to wellness, find curated selections
 				reflecting your unique style. Enjoy a seamless shopping experience tailored to you.
 			</p>
 		</header>

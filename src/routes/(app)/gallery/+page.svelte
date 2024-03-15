@@ -1,19 +1,61 @@
-<script>
+<script lang="ts">
+	export let data;
 	// Define an array of product objects
 	let products = [
 		{
-			name: 'Item 01',
+			name: 'Catering Services',
 			image:
-				'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-			price: '£24.00 GBP',
+				'https://unsplash.com/photos/GJwKzsxUQu4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgxNDQ5fA&force=true&w=1920',
+			price: '$24.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'Conference Supply',
+			image:
+				'https://unsplash.com/photos/1RT4txDDAbM/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgwOTU3fA&force=true&w=1920',
+			price: '$32.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'DJ Services',
+			image:
+				'https://unsplash.com/photos/2UuhMZEChdc/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgxNjQyfA&force=true&w=1920',
+			price: '$24.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'Outdoor Event Supplies',
+			image:
+				'https://unsplash.com/photos/nYugmV-SY6s/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fG91dGRvb3IlMjBldmVudHxlbnwwfHx8fDE3MTA0ODE3OTB8MA&force=true&w=1920',
+			price: '$34.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'Outdoor Event Supplies',
+			image:
+				'https://unsplash.com/photos/nYugmV-SY6s/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fG91dGRvb3IlMjBldmVudHxlbnwwfHx8fDE3MTA0ODE3OTB8MA&force=true&w=1920',
+			price: '$34.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'Conference Supply',
+			image:
+				'https://unsplash.com/photos/1RT4txDDAbM/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgwOTU3fA&force=true&w=1920',
+			price: '$32.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'DJ Services',
+			image:
+				'https://unsplash.com/photos/2UuhMZEChdc/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgxNjQyfA&force=true&w=1920',
+			price: '$24.00 USD',
 			id: 'abcdefg'
 		}
-		// Add more product objects as needed
 	];
 </script>
 
 <div
-	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/dS87qokCAC4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDcxMjQ2fA&force=true&w=1920')] bg-cover"
+	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/iPgQJEcGoE0/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8b3V0ZG9vciUyMGV2ZW50fGVufDB8MHx8fDE3MTA0Nzg5MTd8MA&force=true&w=1920')] bg-cover"
 >
 	<div class="h-full w-full bg-primary-900 p-16 py-48 text-center opacity-30">
 		<h2 class="cursive text-2xl font-bold text-white md:text-6xl">Gallery</h2>
@@ -311,7 +353,7 @@
 				</div>
 			</div>
 
-			<div class=" col-span-3 mt-4 lg:mt-8 lg:grid lg:grid-cols-4 lg:items-start lg:gap-8">
+			<div class=" col-span-3 mt-4 lg:mt-8 lg:grid lg:grid-cols-3 lg:items-start lg:gap-8">
 				<!-- Loop through products and generate HTML for each product -->
 				{#each products as product}
 					<div class="lg:col-span-1">

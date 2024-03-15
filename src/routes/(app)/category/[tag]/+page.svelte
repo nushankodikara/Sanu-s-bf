@@ -1,128 +1,388 @@
-<script>
+<script lang="ts">
 	export let data;
-	const images = [
+	// Define an array of product objects
+	let products = [
 		{
-			name: 'Sectional Sofa',
-			price: '$78900',
-			image: 'https://i.ibb.co/q79KfQr/pexels-pixabay-276583-removebg-preview-1.png',
-			link: ''
-		},
-		{
-			name: 'Two Seater Sofa',
-			price: '$2900',
-			image: 'https://i.ibb.co/3BbZvtQ/pexels-andrea-piacquadio-3757055-removebg-preview-1.png',
-			link: ''
-		},
-		{
-			name: 'Sectional Sofa',
-			price: '$78900',
-			image: 'https://i.ibb.co/DgFfGcm/paul-weaver-n-Wid-MEQsn-AQ-unsplash-removebg-preview-1.png',
-			link: ''
-		},
-		{
-			name: 'Sectional Sofa',
-			price: '$78900',
-			image: 'https://i.ibb.co/K6PL38P/pexels-pixabay-276566-removebg-preview-1.png',
-			link: ''
-		},
-		{
-			name: 'Sectional Sofa',
-			price: '$78900',
+			name: 'Catering Services',
 			image:
-				'https://i.ibb.co/zP9sWqP/phillip-goldsberry-f-Zule-Efe-A1-Q-unsplash-1-removebg-preview-1.png',
-			link: ''
+				'https://unsplash.com/photos/GJwKzsxUQu4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgxNDQ5fA&force=true&w=1920',
+			price: '$24.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'Conference Supply',
+			image:
+				'https://unsplash.com/photos/1RT4txDDAbM/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgwOTU3fA&force=true&w=1920',
+			price: '$32.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'DJ Services',
+			image:
+				'https://unsplash.com/photos/2UuhMZEChdc/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgxNjQyfA&force=true&w=1920',
+			price: '$24.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'Outdoor Event Supplies',
+			image:
+				'https://unsplash.com/photos/nYugmV-SY6s/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fG91dGRvb3IlMjBldmVudHxlbnwwfHx8fDE3MTA0ODE3OTB8MA&force=true&w=1920',
+			price: '$34.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'Outdoor Event Supplies',
+			image:
+				'https://unsplash.com/photos/nYugmV-SY6s/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fG91dGRvb3IlMjBldmVudHxlbnwwfHx8fDE3MTA0ODE3OTB8MA&force=true&w=1920',
+			price: '$34.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'Conference Supply',
+			image:
+				'https://unsplash.com/photos/1RT4txDDAbM/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgwOTU3fA&force=true&w=1920',
+			price: '$32.00 USD',
+			id: 'abcdefg'
+		},
+		{
+			name: 'DJ Services',
+			image:
+				'https://unsplash.com/photos/2UuhMZEChdc/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDgxNjQyfA&force=true&w=1920',
+			price: '$24.00 USD',
+			id: 'abcdefg'
 		}
 	];
+
+	let { tag } = data;
+	// Replace - with space and capitalize
+	let etag = tag.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase());
 </script>
 
 <div
-	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/dS87qokCAC4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDcxMjQ2fA&force=true&w=1920')] bg-cover"
+	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/iPgQJEcGoE0/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8b3V0ZG9vciUyMGV2ZW50fGVufDB8MHx8fDE3MTA0Nzg5MTd8MA&force=true&w=1920')] bg-cover"
 >
 	<div class="h-full w-full bg-primary-900 p-16 py-48 text-center opacity-30">
-		<h2 class="cursive text-2xl font-bold text-white md:text-6xl">{data.tag}</h2>
+		<h2 class="cursive text-2xl font-bold text-white md:text-6xl">{etag}</h2>
 	</div>
 </div>
 
-<div class="container mx-auto px-6 py-12 xl:px-0">
-	<div class="flex flex-col">
-		<div class="mt-10 grid items-center gap-x-8 gap-y-8 lg:grid-cols-2">
-			<!-- Loop through the images array -->
-			{#each images as image}
-				<div
-					class="group relative flex items-center justify-center bg-gray-50 px-10 py-36 transition duration-500 group-hover:bg-opacity-60 dark:bg-gray-800 dark:hover:bg-gray-700 sm:p-28"
-				>
-					<img
-						class="transition duration-500 group-hover:opacity-60"
-						src={image.image}
-						alt={image.name}
-					/>
-					<div
-						class="absolute left-4 top-4 flex flex-col items-start justify-start space-y-2 sm:left-8 sm:top-8"
-					>
-						<div>
-							<p
-								class="text-xl leading-5 text-gray-600 transition duration-500 group-hover:opacity-60 dark:text-white"
-							>
-								{image.name}
-							</p>
-						</div>
-						<div>
-							<p
-								class="text-xl font-semibold leading-5 text-gray-800 transition duration-500 group-hover:opacity-60 dark:text-white"
-							>
-								{image.price}
-							</p>
-						</div>
-					</div>
-					<div
-						class="absolute bottom-8 right-8 flex flex-row items-start justify-start space-x-2 transition duration-500 group-hover:opacity-60"
-					>
-						<button class="rounded-full border border-gray-600 bg-white p-1.5 focus:bg-gray-800"
-						></button>
-						<button class="rounded-full border border-gray-600 bg-white p-1.5 focus:bg-gray-800"
-						></button>
-					</div>
-					<!-- Additional buttons here -->
-					<!-- Also, the "New" label can be added conditionally based on image properties -->
-					<!-- {#if /* Condition for "New" label */}
-        <div class="absolute right-6 top-4">
-          <p class="border-b-2 border-gray-600 pb-0.5 text-base leading-4 text-gray-600 dark:text-white">New</p>
-        </div>
-        {/if} -->
-				</div>
-			{/each}
-		</div>
+<section>
+	<div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+		<header>
+			<h2 class="text-xl font-bold text-gray-900 sm:text-3xl">Service Gallery</h2>
+			<!-- <p class="mt-4 max-w-md text-gray-500">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
+				dicta incidunt est ipsam, officia dolor fugit natus?
+			</p> -->
+		</header>
 
-		<div class="mt-12 flex items-end justify-end">
-			<div class="flex flex-row items-center justify-center space-x-8">
-				<button
-					class="border-b-2 border-transparent text-base leading-none text-gray-800 focus:border-gray-800 focus:outline-none dark:text-white"
-				>
-					<p>1</p>
-				</button>
-				<button
-					class="border-b-2 border-transparent text-base leading-none text-gray-800 focus:border-gray-800 focus:outline-none dark:text-white"
-				>
-					<p>2</p>
-				</button>
-				<button
-					class="border-b-2 border-transparent text-base leading-none text-gray-800 focus:border-gray-800 focus:outline-none dark:text-white"
-				>
-					<p>3</p>
-				</button>
-				<button class="flex items-center justify-center">
-					<img
-						class="dark:hidden"
-						src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg4.svg"
-						alt="next"
-					/>
-					<img
-						class="hidden dark:block"
-						src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg4dark.svg"
-						alt="next"
-					/>
-				</button>
+		<div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+			<div class="mt-8 block">
+				<div class="hidden space-y-4 lg:block">
+					<div>
+						<label for="SortBy" class="block text-xs font-medium text-gray-700"> Sort By </label>
+
+						<select id="SortBy" class="mt-1 rounded border-gray-300 text-sm">
+							<option>Sort By</option>
+							<option value="Title, DESC">Title, DESC</option>
+							<option value="Title, ASC">Title, ASC</option>
+							<option value="Price, DESC">Price, DESC</option>
+							<option value="Price, ASC">Price, ASC</option>
+						</select>
+					</div>
+
+					<div>
+						<p class="block text-xs font-medium text-gray-700">Filters</p>
+
+						<div class="mt-1 space-y-2">
+							<details
+								class="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
+							>
+								<summary
+									class="flex cursor-pointer items-center justify-between gap-2 p-4 text-gray-900 transition"
+								>
+									<span class="text-sm font-medium"> Availability </span>
+
+									<span class="transition group-open:-rotate-180">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="h-4 w-4"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+											/>
+										</svg>
+									</span>
+								</summary>
+
+								<div class="border-t border-gray-200 bg-white">
+									<header class="flex items-center justify-between p-4">
+										<span class="text-sm text-gray-700"> 0 Selected </span>
+
+										<button
+											type="button"
+											class="text-sm text-gray-900 underline underline-offset-4"
+										>
+											Reset
+										</button>
+									</header>
+
+									<ul class="space-y-1 border-t border-gray-200 p-4">
+										<li>
+											<label for="FilterInStock" class="inline-flex items-center gap-2">
+												<input
+													type="checkbox"
+													id="FilterInStock"
+													class="size-5 rounded border-gray-300"
+												/>
+
+												<span class="text-sm font-medium text-gray-700"> In Stock (5+) </span>
+											</label>
+										</li>
+
+										<li>
+											<label for="FilterPreOrder" class="inline-flex items-center gap-2">
+												<input
+													type="checkbox"
+													id="FilterPreOrder"
+													class="size-5 rounded border-gray-300"
+												/>
+
+												<span class="text-sm font-medium text-gray-700"> Pre Order (3+) </span>
+											</label>
+										</li>
+
+										<li>
+											<label for="FilterOutOfStock" class="inline-flex items-center gap-2">
+												<input
+													type="checkbox"
+													id="FilterOutOfStock"
+													class="size-5 rounded border-gray-300"
+												/>
+
+												<span class="text-sm font-medium text-gray-700"> Out of Stock (10+) </span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</details>
+
+							<details
+								class="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
+							>
+								<summary
+									class="flex cursor-pointer items-center justify-between gap-2 p-4 text-gray-900 transition"
+								>
+									<span class="text-sm font-medium"> Price </span>
+
+									<span class="transition group-open:-rotate-180">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="h-4 w-4"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+											/>
+										</svg>
+									</span>
+								</summary>
+
+								<div class="border-t border-gray-200 bg-white">
+									<header class="flex items-center justify-between p-4">
+										<span class="text-sm text-gray-700"> The highest price is $600 </span>
+
+										<button
+											type="button"
+											class="text-sm text-gray-900 underline underline-offset-4"
+										>
+											Reset
+										</button>
+									</header>
+
+									<div class="border-t border-gray-200 p-4">
+										<div class="flex justify-between gap-4">
+											<label for="FilterPriceFrom" class="flex items-center gap-2">
+												<span class="text-sm text-gray-600">$</span>
+
+												<input
+													type="number"
+													id="FilterPriceFrom"
+													placeholder="From"
+													class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+												/>
+											</label>
+
+											<label for="FilterPriceTo" class="flex items-center gap-2">
+												<span class="text-sm text-gray-600">$</span>
+
+												<input
+													type="number"
+													id="FilterPriceTo"
+													placeholder="To"
+													class="w-full rounded-md border-gray-200 shadow-sm sm:text-sm"
+												/>
+											</label>
+										</div>
+									</div>
+								</div>
+							</details>
+
+							<details
+								class="overflow-hidden rounded border border-gray-300 [&_summary::-webkit-details-marker]:hidden"
+							>
+								<summary
+									class="flex cursor-pointer items-center justify-between gap-2 p-4 text-gray-900 transition"
+								>
+									<span class="text-sm font-medium"> Colors </span>
+
+									<span class="transition group-open:-rotate-180">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke-width="1.5"
+											stroke="currentColor"
+											class="h-4 w-4"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+											/>
+										</svg>
+									</span>
+								</summary>
+
+								<div class="border-t border-gray-200 bg-white">
+									<header class="flex items-center justify-between p-4">
+										<span class="text-sm text-gray-700"> 0 Selected </span>
+
+										<button
+											type="button"
+											class="text-sm text-gray-900 underline underline-offset-4"
+										>
+											Reset
+										</button>
+									</header>
+
+									<ul class="space-y-1 border-t border-gray-200 p-4">
+										<li>
+											<label for="FilterRed" class="inline-flex items-center gap-2">
+												<input
+													type="checkbox"
+													id="FilterRed"
+													class="size-5 rounded border-gray-300"
+												/>
+
+												<span class="text-sm font-medium text-gray-700"> Red </span>
+											</label>
+										</li>
+
+										<li>
+											<label for="FilterBlue" class="inline-flex items-center gap-2">
+												<input
+													type="checkbox"
+													id="FilterBlue"
+													class="size-5 rounded border-gray-300"
+												/>
+
+												<span class="text-sm font-medium text-gray-700"> Blue </span>
+											</label>
+										</li>
+
+										<li>
+											<label for="FilterGreen" class="inline-flex items-center gap-2">
+												<input
+													type="checkbox"
+													id="FilterGreen"
+													class="size-5 rounded border-gray-300"
+												/>
+
+												<span class="text-sm font-medium text-gray-700"> Green </span>
+											</label>
+										</li>
+
+										<li>
+											<label for="FilterOrange" class="inline-flex items-center gap-2">
+												<input
+													type="checkbox"
+													id="FilterOrange"
+													class="size-5 rounded border-gray-300"
+												/>
+
+												<span class="text-sm font-medium text-gray-700"> Orange </span>
+											</label>
+										</li>
+
+										<li>
+											<label for="FilterPurple" class="inline-flex items-center gap-2">
+												<input
+													type="checkbox"
+													id="FilterPurple"
+													class="size-5 rounded border-gray-300"
+												/>
+
+												<span class="text-sm font-medium text-gray-700"> Purple </span>
+											</label>
+										</li>
+
+										<li>
+											<label for="FilterTeal" class="inline-flex items-center gap-2">
+												<input
+													type="checkbox"
+													id="FilterTeal"
+													class="size-5 rounded border-gray-300"
+												/>
+
+												<span class="text-sm font-medium text-gray-700"> Teal </span>
+											</label>
+										</li>
+									</ul>
+								</div>
+							</details>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class=" col-span-3 mt-4 lg:mt-8 lg:grid lg:grid-cols-3 lg:items-start lg:gap-8">
+				<!-- Loop through products and generate HTML for each product -->
+				{#each products as product}
+					<div class="lg:col-span-1">
+						<a href={'/item/' + product.id} class="group block overflow-hidden">
+							<img
+								src={product.image}
+								alt={product.name}
+								class="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+							/>
+
+							<div class="relative bg-white pt-3">
+								<h3
+									class="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4"
+								>
+									{product.name}
+								</h3>
+								<p class="mt-2">
+									<span class="sr-only"> Regular Price </span>
+									<span class="tracking-wider text-gray-900">{product.price}</span>
+								</p>
+							</div>
+						</a>
+					</div>
+				{/each}
 			</div>
 		</div>
 	</div>
-</div>
+</section>

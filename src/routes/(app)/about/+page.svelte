@@ -1,16 +1,13 @@
 <div
-	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/dS87qokCAC4/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzEwNDcxMjQ2fA&force=true&w=1920')] bg-cover"
+	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/iPgQJEcGoE0/download?ixid=M3wxMjA3fDB8MXxzZWFyY2h8Nnx8b3V0ZG9vciUyMGV2ZW50fGVufDB8MHx8fDE3MTA0Nzg5MTd8MA&force=true&w=1920')] bg-cover"
 >
 	<div class="h-full w-full bg-primary-900 p-16 py-48 text-center opacity-30">
 		<h2 class="cursive text-2xl font-bold text-white md:text-6xl">About</h2>
 	</div>
 </div>
 
-<div class="px-4 py-32">
+<div class="px-4 py-16">
 	<div class="mx-auto max-w-2xl">
-		<h2 class=" text-center text-2xl font-semibold text-gray-800 dark:text-white md:text-4xl">
-			About Us
-		</h2>
 		<p class="mt-4 text-center text-gray-600 dark:text-gray-400">
 			At Pure Heart, we believe that weddings are not just events; they are beautiful expressions of
 			love, commitment, and lifelong promises. Founded on the principle of infusing every
