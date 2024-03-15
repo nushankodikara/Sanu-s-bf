@@ -1,0 +1,128 @@
+<script>
+	export let data;
+	const images = [
+		{
+			name: 'Sectional Sofa',
+			price: '$78900',
+			image: 'https://i.ibb.co/q79KfQr/pexels-pixabay-276583-removebg-preview-1.png',
+			link: ''
+		},
+		{
+			name: 'Two Seater Sofa',
+			price: '$2900',
+			image: 'https://i.ibb.co/3BbZvtQ/pexels-andrea-piacquadio-3757055-removebg-preview-1.png',
+			link: ''
+		},
+		{
+			name: 'Sectional Sofa',
+			price: '$78900',
+			image: 'https://i.ibb.co/DgFfGcm/paul-weaver-n-Wid-MEQsn-AQ-unsplash-removebg-preview-1.png',
+			link: ''
+		},
+		{
+			name: 'Sectional Sofa',
+			price: '$78900',
+			image: 'https://i.ibb.co/K6PL38P/pexels-pixabay-276566-removebg-preview-1.png',
+			link: ''
+		},
+		{
+			name: 'Sectional Sofa',
+			price: '$78900',
+			image:
+				'https://i.ibb.co/zP9sWqP/phillip-goldsberry-f-Zule-Efe-A1-Q-unsplash-1-removebg-preview-1.png',
+			link: ''
+		}
+	];
+</script>
+
+<div
+	class="flex w-full flex-col items-center justify-center bg-[url('https://unsplash.com/photos/NSVJAAXOYHs/download?force=true&w=1920')] bg-cover"
+>
+	<div class="h-full w-full bg-primary-900 p-16 py-48 text-center opacity-30">
+		<h2 class="cursive text-2xl font-bold text-white md:text-6xl">{data.tag}</h2>
+	</div>
+</div>
+
+<div class="container mx-auto px-6 py-12 xl:px-0">
+	<div class="flex flex-col">
+		<div class="mt-10 grid items-center gap-x-8 gap-y-8 lg:grid-cols-2">
+			<!-- Loop through the images array -->
+			{#each images as image}
+				<div
+					class="group relative flex items-center justify-center bg-gray-50 px-10 py-36 transition duration-500 group-hover:bg-opacity-60 dark:bg-gray-800 dark:hover:bg-gray-700 sm:p-28"
+				>
+					<img
+						class="transition duration-500 group-hover:opacity-60"
+						src={image.image}
+						alt={image.name}
+					/>
+					<div
+						class="absolute left-4 top-4 flex flex-col items-start justify-start space-y-2 sm:left-8 sm:top-8"
+					>
+						<div>
+							<p
+								class="text-xl leading-5 text-gray-600 transition duration-500 group-hover:opacity-60 dark:text-white"
+							>
+								{image.name}
+							</p>
+						</div>
+						<div>
+							<p
+								class="text-xl font-semibold leading-5 text-gray-800 transition duration-500 group-hover:opacity-60 dark:text-white"
+							>
+								{image.price}
+							</p>
+						</div>
+					</div>
+					<div
+						class="absolute bottom-8 right-8 flex flex-row items-start justify-start space-x-2 transition duration-500 group-hover:opacity-60"
+					>
+						<button class="rounded-full border border-gray-600 bg-white p-1.5 focus:bg-gray-800"
+						></button>
+						<button class="rounded-full border border-gray-600 bg-white p-1.5 focus:bg-gray-800"
+						></button>
+					</div>
+					<!-- Additional buttons here -->
+					<!-- Also, the "New" label can be added conditionally based on image properties -->
+					<!-- {#if /* Condition for "New" label */}
+        <div class="absolute right-6 top-4">
+          <p class="border-b-2 border-gray-600 pb-0.5 text-base leading-4 text-gray-600 dark:text-white">New</p>
+        </div>
+        {/if} -->
+				</div>
+			{/each}
+		</div>
+
+		<div class="mt-12 flex items-end justify-end">
+			<div class="flex flex-row items-center justify-center space-x-8">
+				<button
+					class="border-b-2 border-transparent text-base leading-none text-gray-800 focus:border-gray-800 focus:outline-none dark:text-white"
+				>
+					<p>1</p>
+				</button>
+				<button
+					class="border-b-2 border-transparent text-base leading-none text-gray-800 focus:border-gray-800 focus:outline-none dark:text-white"
+				>
+					<p>2</p>
+				</button>
+				<button
+					class="border-b-2 border-transparent text-base leading-none text-gray-800 focus:border-gray-800 focus:outline-none dark:text-white"
+				>
+					<p>3</p>
+				</button>
+				<button class="flex items-center justify-center">
+					<img
+						class="dark:hidden"
+						src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg4.svg"
+						alt="next"
+					/>
+					<img
+						class="hidden dark:block"
+						src="https://tuk-cdn.s3.amazonaws.com/can-uploader/product-grid-2-svg4dark.svg"
+						alt="next"
+					/>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
